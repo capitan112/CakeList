@@ -38,4 +38,20 @@
     [dataTask resume];
 }
 
+- (void)downloadImageWithURL:(NSString *)urlStr completionBlock:(void (^)(BOOL succeeded, UIImage *image))completionBlock {
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURL *url = [NSURL URLWithString: urlStr];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url
+                                            completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                                if (error) {
+                                                    NSLog(@"session error %@", error);
+                                                    completionBlock(NO, nil);
+                                                } else {
+                                                    UIImage *image = [[UIImage alloc] initWithData:data];
+                                                    completionBlock(YES, image);
+                                                }
+                                            }];
+    [dataTask resume];
+}
+
 @end

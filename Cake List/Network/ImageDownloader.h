@@ -10,12 +10,9 @@
 #import "AbstractOperation.h"
 #import "CakeInfo.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface ImageDownloader : AbstractOperation
 
 - (instancetype)initWithCakeInfo:(CakeInfo *)cakeInfo completion:(void (^)(BOOL succeeded, UIImage *image))completion;
 
 @end
 
-NS_ASSUME_NONNULL_END

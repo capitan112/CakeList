@@ -13,6 +13,7 @@
 
 + (NetworkService *)sharedInstance;
 - (void) fetchDataFromURL:(NSString*)urlStr withCompletionBlock:(void(^)(NSArray *cakeInfoArray, NSError *error)) completionBlock;
+- (void)downloadImageWithURL:(NSString *)urlStr completionBlock:(void (^)(BOOL succeeded, UIImage *image))completionBlock;
 
 @end
 

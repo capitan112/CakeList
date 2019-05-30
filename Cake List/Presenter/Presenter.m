@@ -55,4 +55,16 @@ static NSString *url =
         [[OperationQueueManager  sharedInstance] addOperation:imageDownloader];
 }
 
+// Easy to replace API call to server
+
+//- (void)downloadImageWithCakeInfo:(CakeInfo *)cakeInfo completionBlock: (void (^)(BOOL succeeded, UIImage *image))completionBlock {
+//    [[NetworkService sharedInstance] downloadImageWithURL: cakeInfo.imageURL completionBlock: ^(BOOL succeeded, UIImage *image) {
+//        if (succeeded) {
+//            completionBlock(YES, image);
+//        } else {
+//            completionBlock(NO, nil);
+//        }
+//    }];
+//}
+
 @end

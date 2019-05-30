@@ -12,8 +12,6 @@
 
 @interface MasterViewController ()
 
-typedef enum tagname tagname;
-
 @property (strong, nonatomic) id <PresenterProtocol> presenter;
 
 @end
