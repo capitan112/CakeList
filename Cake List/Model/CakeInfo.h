@@ -15,7 +15,6 @@
 @property (nonatomic, strong, nonnull) NSString *descr;
 @property (nonatomic, strong, nonnull) NSString *imageURL;
 @property (nonatomic, strong, nonnull) UIImage  *image;
-@property (nonatomic, assign) BOOL isLoadedImage;
 
 - (instancetype _Nullable)initWithTitle:(NSString *_Nullable)title description:(NSString *_Nullable)descr imageURL:(NSString *_Nullable)imageURL;
 

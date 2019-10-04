@@ -16,7 +16,6 @@
         self.title = title;
         self.descr = descr;
         self.imageURL = imageURL;
-        self.isLoadedImage = NO;
     }
     
     return self;

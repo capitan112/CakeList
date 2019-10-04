@@ -52,7 +52,7 @@
     
     CakeInfo *cakeInfo = (CakeInfo *)self.cakeInfoArray[indexPath.row];
     [cell configCellWith: cakeInfo];
-    if (cakeInfo.isLoadedImage) {
+    if (cakeInfo.image) {
         if (cakeInfo.image) {
             [cell addImage: cakeInfo.image];
         } 
@@ -61,7 +61,6 @@
             if (succeeded) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     cakeInfo.image = image;
-                    cakeInfo.isLoadedImage = YES;
                     [cell addImage: image];
                 });
             } else {
